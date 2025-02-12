@@ -1,0 +1,83 @@
+
+
+body {
+  font-family: arial;
+}
+.count-down {
+  font-size: 80px;
+  font-weight: bold;
+}
+
+.count-down .count::before {
+  content: "";
+  animation: countdown 100s step-end 1 forwards;
+}
+
+.count-down .count::after {
+  content: "";
+  animation: countdown 10s step-end 10 forwards;
+}
+
+@keyframes countdown {
+  0% {
+    content: "9";
+  }
+  
+  10% {
+    content: "8";
+  }
+  
+  20% {
+    content: "7";
+  }
+  30% {
+    content: "6";
+  }
+  40% {
+    content: "5";
+  }
+  50% {
+    content: "4";
+  }
+  60% {
+    content: "3";
+  }
+  70% {
+    content: "2";
+  }
+  80% {
+    content: "1";
+  }
+  90%, 100% {
+    content: "0";
+  }
+}
+
+
+
+
+/*
+.count-down{
+  .count{
+    &::before{
+      content: ""; 
+      animation:countdown 100s step-end 1 forwards;
+    }    
+    &::after{
+      content: ""; 
+      animation: countdown 10s step-end 10 forwards;
+    }  
+  } 
+}
+@keyframes countdown {
+  0%  { content: "9" }
+  10% { content: "8" }
+  20% { content: "7" }
+  30% { content: "6" }
+  40% { content: "5" }
+  50% { content: "4" }
+  60% { content: "3" }
+  70% { content: "2" }
+  80% { content: "1" }
+  90%, 100% { content: "0" }
+}
